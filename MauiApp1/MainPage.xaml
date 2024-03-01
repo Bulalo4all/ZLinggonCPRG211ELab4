@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp1.MainPage"
+             xmlns:vm="clr-namespace:MauiApp1.ViewModels"
+             x:DataType="vm:MainViewModel">
+
+    <Grid RowDefinitions="100, Auto, Auto, Auto, Auto, Auto"
+          ColumnDefinitions="Auto, Auto, Auto, Auto"
+          Padding="10"
+          HorizontalOptions="Center"
+          VerticalOptions="Center">
+
+        <Label Text="{Binding DisplayValue}"
+               Grid.Row="0"
+               Grid.ColumnSpan="4"
+               Background="Black"
+               TextColor="White"
+               HorizontalTextAlignment="Center"
+               VerticalTextAlignment="Center"/>
+
+        <Button Text="AC"
+                Command="{Binding buttonACCommand}"
+                Grid.Row="1"
+                Grid.Column="0"
+                BackgroundColor="Grey"/>
+
+        <Button Text="+/-"
+                Command="{Binding ButtonPlusOrMinusCommand}"
+                Grid.Row="1"
+                Grid.Column="1"
+                Grid.ColumnSpan="2"
+                BackgroundColor="Grey"/>
+
+        <Button Text="÷"
+                Command="{Binding DivideButtonCommand}"
+                Grid.Row="1"
+                Grid.Column="3"
+                BackgroundColor="Orange"/>
+
+        <Button Text="7"
+                Command="{Binding buttonSevenCommand}"
+                Grid.Row="2"
+                Grid.Column="0"
+                BackgroundColor="DimGray"/>
+
+        <Button Text="8"
+                Command="{Binding buttonEightCommand}"
+                Grid.Row="2"
+                Grid.Column="1"
+                BackgroundColor="DimGray"/>
+
+        <Button Text="9"
+                Command="{Binding buttonNineCommand}"
+                Grid.Row="2"
+                Grid.Column="2"
+                BackgroundColor="DimGray"/>
+
+        <Button Text="X"
+                Command="{Binding MultiplyButtonCommand}"
+                Grid.Row="2"
+                Grid.Column="3"
+                BackgroundColor="Orange"/>
+
+        <Button Text="4"
+                Command="{Binding buttonFourCommand}"
+                Grid.Row="3"
+                Grid.Column="0"
+                BackgroundColor="DimGray"/>
+
+        <Button Text="5"
+                Command="{Binding buttonFiveCommand}"
+                Grid.Row="3"
+                Grid.Column="1"
+                BackgroundColor="DimGray"/>
+
+        <Button Text="6"
+                Command="{Binding buttonSixCommand}"
+                Grid.Row="3"
+                Grid.Column="2"
+                BackgroundColor="DimGray"/>
+
+        <Button Text="-"
+                Command="{Binding MinusButtonCommand}"
+                Grid.Row="3"
+                Grid.Column="3"
+                BackgroundColor="Orange"/>
+
+        <Button Text="1"
+                Command="{Binding buttonOneCommand}"
+                Grid.Row="4"
+                Grid.Column="0"
+                BackgroundColor="DimGray"/>
+
+        <Button Text="2"
+                Command="{Binding buttonTwoCommand}"
+                Grid.Row="4"
+                Grid.Column="1"
+                BackgroundColor="DimGray"/>
+
+        <Button Text="3"
+                Command="{Binding buttonThreeCommand}"
+                Grid.Row="4"
+                Grid.Column="2"
+                BackgroundColor="DimGray"/>
+
+        <Button Text="+"
+                Command="{Binding AddButtonCommand}"
+                Grid.Row="4"
+                Grid.Column="3"
+                BackgroundColor="Orange"/>
+
+        <Button Text="0"
+                Command="{Binding buttonZeroCommand}"
+                Grid.Row="5"
+                Grid.ColumnSpan="2"
+                Grid.Column="0"
+                BackgroundColor="DimGray"/>
+
+        <Button Text="."
+                Command="{Binding buttonDecimalCommand}"
+                Grid.Row="5"
+                Grid.Column="2"
+                BackgroundColor="DimGray"/>
+
+        <Button Text="="
+                Command="{Binding calculateButtonCommand}"
+                Grid.Row="5"
+                Grid.Column="3"
+                BackgroundColor="Orange"/>
+
+    </Grid>
+
+</ContentPage>
